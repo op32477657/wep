@@ -1,0 +1,11 @@
+body {
+    background-color: purple;
+}
+
+@media (min-width:800px) {
+    p,
+    h1 {
+        font-size: 250%;
+        color: rgb(2, 253, 65);
+    }
+}
