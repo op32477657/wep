@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <title>My Document</title> 
+  <style>
+  .line{
+      border-left: thick solid rgba(0, 0, 0, 0.411);
+      height:100%;
+      left: 1900px;
+      position: absolute;
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript"> 
+  var i=0,g=1,k=1,i1=0,g1=1,k1=1,i2=0,g2=1,k2=1,i2=0,g2=1,k2=1,i3=0,g3=1,k3=1,i4=0,g4=1,k4=1,i5=0,g5=1,k5=1;
+  var char=[ ];
+  char[1]="1.jpg";
+  char[2]="2.jpg";
+  char[3]="3.jpg";
+  char[4]="4.jpg";
+  char[5]="5.jpg";
+  char[6]="6.jpg";
+  char[7]="7.jpg";
+  char[8]="8.jpg";
+  char[9]="9.jpg";  
+  char[10]="10.jpg";
+  char[11]="11.jpg";
+  char[12]="12.jpg";
+  char[13]="13.jpg";
+  char[14]="14.jpg";
+  char[15]="15.jpg";
+  char[16]="16.jpg";
+  char[17]="17.jpg";
+  char[18]="18.jpg";
+  char[19]="19.jpg";
+  char[20]="20.jpg";
+  char[21]="21.jpg";
+  char[22]="22.jpg";
+  char[23]="23.jpg";
+  char[24]="24.jpg";
+  char[25]="25.jpg";
+  char[26]="26.jpg";
+  var str1="";
+  function move()
+  {
+    $("#word"+g).animate({
+        left:'1900px'
+    },9000,'linear',animationcomplete)
+    g++;
+  }
+  function animationcomplete()
+  {
+    $("*").empty();
+  }
+  function generate()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an1").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate1()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i1++;
+    $("#an2").prepend("<div id='word" + i1 +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate2()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i2++;
+    $("#an3").prepend("<div id='word" + i2 +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate3()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i3++;
+    $("#an4").prepend("<div id='word" + i3 +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate4()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i4++;
+    $("#an5").prepend("<div id='word" + i4 +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate5()
+  {
+    var num1 = Math.floor(Math.random() * 26 + 1);
+    i5++;
+    $("#an6").prepend("<div id='word" + i5 +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str;
+    move();
+  }
+  $(document).ready(function() 
+  { 
+    $("#btn1").click(function()
+    {
+      setInterval(generate,1500);
+      setInterval(generate1,1500);
+      setInterval(generate2,1500);
+      setInterval(generate3,1500);
+      setInterval(generate4,1500);
+      setInterval(generate5,1500);
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key==str1.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str1=str1.substr(0,str1.length-1);
+      }
+      
+
+    });
+  } );
+ 
+  </script> 
+</head> 
+<body> 
+<button id="btn1">START</button>
+<div class="line"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an1" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an2" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an3" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an4" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an5" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<div id="an6" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+</body> 
+</head> 
+</html>
